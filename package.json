@@ -1,0 +1,34 @@
+{
+  "name": "parametric-geometry-using-threejs-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./build",
+    "build:index:html": "mkdir -p ./build && cp ./src/index.html ./build/index.html",
+    "build:favicon": "mkdir -p ./build && cp ./src/favicon.ico ./build/favicon.ico",
+    "build:src": "cp ./src/three.js ./build/three.js",
+    "build": "npm run build:favicon && npm run build:index:html && npm run build:src",
+    "start": "npm run build && http-server ./build -p 8080 -c-1 -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelprescott/parametric-geometry-using-threejs-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelprescott/parametric-geometry-using-threejs-1/issues"
+  },
+  "homepage": "https://github.com/michaelprescott/parametric-geometry-using-threejs-1#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.17",
+    "http-server": "^14.1.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "three": "^0.137.5"
+  }
+}
