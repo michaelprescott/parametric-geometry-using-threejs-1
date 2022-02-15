@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="application-name" content="<%= htmlWebpackPlugin.options.appName %>" />
+    <meta name="revised" content="<%= htmlWebpackPlugin.options.buildTime %>" />
+    <meta name="author" content="<%= htmlWebpackPlugin.options.author %>" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <%- htmlWebpackPlugin
+      .tags
+      .headTags
+      .filter((tag) => tag.tagName === 'meta')
+      .join('')
+    %>
+
+    <%- include ./partials/host-and-port-info.ejs %>
+  </head>
+
+  <body>
+    <%- include ./partials/page-js.ejs %>
+  </body>
+</html>

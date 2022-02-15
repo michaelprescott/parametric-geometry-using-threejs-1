@@ -1,0 +1,10 @@
+<% if (htmlWebpackPlugin.files.jsIntegrity) { %>
+  <% for (key in htmlWebpackPlugin.files.js) { %>  <script
+      src="<%= htmlWebpackPlugin.files.js[key] %>"
+      integrity="<%= htmlWebpackPlugin.files.jsIntegrity[htmlWebpackPlugin.files.js.indexOf(htmlWebpackPlugin.files.js[key])] %>"
+      crossorigin="<%= webpackConfig.output.crossOriginLoading %>"></script>
+  <% } %>
+<% } else { %>
+  <% for (key in htmlWebpackPlugin.files.js) { %>  <script src="<%= htmlWebpackPlugin.files.js[key] %>"></script>
+  <% } %>
+<% } %>

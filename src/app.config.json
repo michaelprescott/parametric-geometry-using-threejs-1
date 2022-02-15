@@ -1,0 +1,9 @@
+{
+  "name": "zapdaz app.config.json",
+  "version": "1.0.0",
+  "appName": "zapdaz",
+  "location": "remote",
+  "release": "${releaseBranch}",
+  "enabled": true,
+  "useServerCache": true
+}

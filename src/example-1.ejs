@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="application-name" content="<%= htmlWebpackPlugin.options.appName %>" />
+    <meta name="revised" content="<%= htmlWebpackPlugin.options.buildTime %>" />
+    <meta name="author" content="<%= htmlWebpackPlugin.options.author %>" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+
+    <!-- prettier-ignore -->
+    <%- htmlWebpackPlugin
+      .tags
+      .headTags
+      .filter((tag) => tag.tagName === 'meta')
+      .join('')
+    %>
+
+    <%- include ./partials/host-and-port-info.ejs %>
+  </head>
+
+  <body>
+    <%- include ./partials/page-js.ejs %>
+
+    <script>
+      console.log("window.zapdaz.Example1=%o", window.zapdaz.Example1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="application-name" content="<%= htmlWebpackPlugin.options.appName %>" />
+    <meta name="revised" content="<%= htmlWebpackPlugin.options.buildTime %>" />
+    <meta name="author" content="<%= htmlWebpackPlugin.options.author %>" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!-- prettier-ignore -->
+    <%- htmlWebpackPlugin
+      .tags
+      .headTags
+      .filter((tag) => tag.tagName === 'meta')
+      .join('')
+    %>
+
+    <%- include ./partials/host-and-port-info.ejs %>
+  </head>
+
+  <body>
+    <%- include ./partials/page-js.ejs %>
+
+    <ul>
+      <li><a href="example-1.html">example-1</a></li>
+      <li><a href="example-2.html">example-2</a></li>
+    </ul>
+
+    <!--
+      webpack devServer is configured with several static paths.
+      Along with the following, we can test latest build and
+      manually run various tests.
+      { directory: path.join(__dirname, "tests/manual") }
+    -->
+
+    <!-- prettier-ignore -->
+    <ul>
+      <li><a id="manual-inject-script-test" href="inject-script/manual-inject-script-test.html">tests/manual/inject-script/manual-inject-script-test</a></li>
+    </ul>
+
+    <!-- Prettier 2.5.1, ignore range is still not working. 2022-02-04 -->
+    <!-- REFERENCE: https://github.com/prettier/prettier/issues/5287 -->
+    <!-- prettier-ignore-start -->
+    <!-- prettier-ignore-end -->
+  </body>
+</html>

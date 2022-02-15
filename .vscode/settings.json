@@ -1,0 +1,38 @@
+{
+  "files.watcherExclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/stage": true,
+    "**/artifacts": true
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#039edb",
+    "activityBar.activeBorder": "#f6ab89",
+    "activityBar.background": "#039edb",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#f6ab89",
+    "activityBarBadge.foreground": "#15202b",
+    "statusBar.background": "#035f83",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#039edb",
+    "titleBar.activeBackground": "#035f83",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#035f8399",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "sash.hoverBorder": "#039edb",
+    "statusBarItem.remoteBackground": "#035f83",
+    "statusBarItem.remoteForeground": "#e7e7e7"
+  },
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#5a5a5a20"
+    },
+    {
+      "column": 120,
+      "color": "#ff000025"
+    },
+  ],
+  "editor.hover.delay": 600
+}

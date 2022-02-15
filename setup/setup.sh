@@ -55,7 +55,50 @@ npm init -y             ## Node project initialization
 npm install typescript --save-dev      # TypeScript transpiler
 npm install @types/node --save-dev     # Type definitions for Node.js
 npm install http-server --save-dev     # A simple static HTTP server
-npm install three --save               # JavaScript 3D engine
+
+npm install webpack --save-dev         # Building tools and plugins
+npm install webpack-cli --save-dev
+npm install webpack-dev-server --save-dev
+npm install pnp-webpack-plugin --save-dev
+npm install copy-webpack-plugin --save-dev
+npm install html-webpack-plugin --save-dev
+npm install webpack-subresource-integrity --save-dev
+npm install webpack-bundle-analyzer --save-dev
+npm install ts-loader --save-dev
+npm install style-loader --save-dev
+npm install css-loader --save-dev
+npm install sass --save-dev
+npm install sass-loader --save-dev
+npm install ejs-compiled-loader --save-dev
+npm install string-replace-loader --save-dev
+npm install eslint --save-dev
+npm install eslint-webpack-plugin --save-dev
+npm install prettier --save-dev
+npm install eslint-plugin-prettier --save-dev
+npm install eslint-config-prettier --save-dev
+npm install @typescript-eslint/eslint-plugin --save-dev
+npm install jsdom --save-dev
+npm install @types/jsdom --save-dev
+
+npm install dayjs                      # Date manipulation and formatting
+npm install uuid                       # For browser and node uuid for common results
+npm install @types/uuid --save-dev     # between lambda functions and client using v5()
+
+npm install jest --save-dev            # unit testing
+npm install ts-jest --save-dev
+npm install @types/jest --save-dev
+
+## Answer no to the Jest question about whether or not to enable TypeScript.
+## Instead, add the line: preset: "ts-jest" to the jest.config.js file afterwards.
+## Also, add `/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */`
+## above the `module.exports = {` line at top.
+npx jest --init
+## The following create a basic Jest configuration file which will inform Jest
+## about how to handle .ts files correctly
+#npx ts-jest config:init
+
+npm install three --save
+npm install @types/three --save-dev
 ## ============================================================================
 
 ## ----------------------------------------------------------------------------
@@ -98,4 +141,6 @@ EOL
 curl -o .gitignore https://www.toptal.com/developers/gitignore/api/osx,node,windows,webstorm,jetbrains,sublimetext,visualstudiocode,yarn
 
 mkdir -p src
-curl -o ./src/three.js https://threejs.org/build/three.js
+#curl -o ./src/three.js https://threejs.org/build/three.js
+
+

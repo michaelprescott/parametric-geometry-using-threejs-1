@@ -1,0 +1,7 @@
+<script>
+      let HOSTNAME = window.location.hostname;
+      let PORT = window.location.port.length > 0 ? ":" + window.location.port : "";
+      let hostNameAndPort = HOSTNAME + PORT;
+      let pathMinusHostAndPort = window.location.href.substr(window.location.href.indexOf(hostNameAndPort) + hostNameAndPort.length);
+      let APP_PATH = pathMinusHostAndPort;
+    </script>
